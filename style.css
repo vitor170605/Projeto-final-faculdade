@@ -1,0 +1,85 @@
+.bloco1,
+.bloco2,
+.bloco3,
+.bloco4 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0rem;
+    /* Espaçamento entre os cards */
+    margin: 1rem 0;
+    /* Margem para espaçamento entre blocos */
+    padding: 1rem;
+}
+
+
+/* Estilo dos Cards */
+.card {
+    margin: 30px;
+    background-color: rgb(250, 249, 240);
+    color: azure;
+    width: 230px;
+    height: 360px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4), 0px 7px 13px -3px rgba(0, 0, 0, 0.3), inset 0px -3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #0a0a0a;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #1d1b1b;
+    margin-bottom: 1rem;
+}
+
+/* Botão de Compra */
+.botão,
+.btn-comprar {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: rgb(97, 87, 87);
+    color: aliceblue;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 30px;
+}
+
+.botão:hover,
+.btn-comprar:hover {
+    background-color: rgb(235, 232, 77);
+    transform: scale(1.05);
+}
+
+/* Container Geral */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.inner-background {
+    width: 1270px;
+    height: 2000px;
+    background-color: #9090900f;
+    border-radius: 10%;
+
+}
