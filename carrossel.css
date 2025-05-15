@@ -25,7 +25,7 @@
 .slides {
     display: flex;
     width: 300%;
-    transition: margin-left 0.5s ease;
+    transition: margin-left 1.0s ease;
 }
 
 
@@ -47,3 +47,4 @@
 #radio2:checked~.slides {
     margin-left: -100%;
 }
+

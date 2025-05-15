@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Hoje é Aonde?</title>
+    <link rel="icon" href="img\logo_redonda_png.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./carrossel.css">
+    <link rel="stylesheet" href="./geral.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="fde"><span>Hoje</span> é aonde?</h1>
+        <nav class="main_nav">
+            <a title="#Home">Home</a>
+            <a href="#Eventos" title="Sobre">Eventos</a>
+            <a href="#Sobre" title="Eventos">Sobre</a>
+            <a href="#Contato" title="Contato">Contato</a>
+
+            <img class="img-logo" src="img\icon.png" alt="logo site">
+        </nav>
+    </header>
+
+    <main>
+        <main>
+            <h2>Principais eventos</h2>
+            <div class="slider">
+                <!-- Inputs de rádio para controle manual -->
+                <input class="radio-display" type="radio" name="radio-btn" id="radio1" checked>
+                <input class="radio-display" type="radio" name="radio-btn" id="radio2">
+                <input class="radio-display" type="radio" name="radio-btn" id="radio3">
+
+                <div class="slides">
+                    <div class="slide first">
+                        <img src="img\VIZAO banner.png" alt="vizão">
+                    </div>
+                    <div class="slide second">
+                        <img src="img\MATUE carrosel.png" alt="matue">
+                    </div>
+                    <div class="slide third">
+                        <img src="img\VITRINNI.png" alt="VITRINNI">
+                    </div>
+                </div>
+
+                <div class="manual-navigation">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+
+                </div>
+        </main>
+
+        <script>
+            // Função para alternar entre as imagens automaticamente
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.radio-display');
+            const totalSlides = slides.length;
+
+            function changeSlide() {
+                // Desmarcar o input atual
+                slides[currentSlide].checked = false;
+                // Avançar para o próximo slide
+                currentSlide = (currentSlide + 1) % totalSlides;
+                // Marcar o próximo input de rádio
+                slides[currentSlide].checked = true;
+            }
+
+            // Chama a função changeSlide a cada 5 segundos (5000ms)
+            setInterval(changeSlide, 2000); // Troca de imagem a cada 5 segundos
+        </script>
+
+        <style>
+            /* Estilos para o slideshow */
+            .slider {
+                position: relative;
+                width: 100%;
+                max-width: 600px;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+
+            .slides {
+                display: flex;
+                transition: transform 1s ease-in-out;
+            }
+
+            .slide img {
+                width: 100%;
+                height: auto;
+            }
+
+            .radio-display {
+                display: none;
+                /* Esconde os inputs de rádio */
+            }
+
+            .manual-navigation label {
+                cursor: pointer;
+                /* Adicione mais estilos se necessário */
+            }
+        </style>
+        </div>
+
+        <div id="Eventos" class="container">
+            <div id="eventos" class="wrapper">
+                <div class="inner-background">
+                    <div class="bloco1">
+                        <div class="card card 1">
+                            <img src="img\bosque.png" alt="Evento Bosque Bar">
+                            <h3>Bosque Bar</h3>
+                            <p>Local: Av. Bartolomeu Mitre, 1314 - Gávea</p>
+                            <a href="https://linktr.ee/bosquebar" target="_blank">
+                                <button class="btn-comprar">Comprar</button></a>
+                        </div>
+
+                        <div class="card card2">
+                            <img src="img\aldeia.png" alt="Evento Aldeia">
+                            <h3>Aldeia</h3>
+                            <p>Local: Parque dos Patins- Lagoa</p>
+                            <a href="https://linktr.ee/aldeialagoa" target="_blank">
+                                <button class="btn-comprar">Comprar</button></a>
+                        </div>
+
+
+                        <div class="card card3">
+                            <img src="img\parque.png" alt="Imagem do evento Parque Bar">
+                            <h3>Parque Bar</h3>
+                            <p>Local: Parque dos Patins- Lagoa </p>
+                            <a href="https://linktr.ee/parquebar" target="_blank">
+                                <button class="btn-comprar">Comprar</button></a>
+                        </div>
+
+                        <div class="card card4">
+                            <img src="img\all in.png" alt="Imagem do evento All In">
+                            <h3>All In</h3>
+                            <p>Local: Av. Armando Lombardi, 483 - Barra da Tijuca</p>
+                            <a href="https://www.allinlounge-rio.com.br/programacao" target="_blank">
+                                <button class="btn-comprar">Comprar</button></a>
+                        </div>
+                    </div>
+
+                    <div class="bloco2">
+                        <div class="card card5">
+                            <img src="img\trinni.png" alt="Imagem do evento Trinni">
+                            <h3>Trinni</h3>
+                            <p>Local: Av. Armando Lombardi, 483 - Barra da Tijuca</p>
+                            <a href="https://www.vitrinnilounge.com/evento.php?ev=2318&&filial=rj" target="_blank">
+                                <button class="btn-comprar">Comprar</button></a>
+                        </div>
+
+
+                        <div class="card card6">
+                            <img src="img\cherry.png" alt="Imagem do evento Cherry On">
+                            <h3>Cherry On</h3>
+                            <p> Local: Rua Mario Ribeiro, nº 410 - Gávea </p>
+                            <a href="https://www.ingresse.com/cherry-on-15-12/" target="_blank">
+                                <button class="btn-comprar">Comprar</button> </a>
+                        </div>
+
+                        <div class="card card7">
+                            <img src="img\mainstreet.png" alt="imagem7">
+                            <h3>Mainstreet Festival</h3>
+                            <p>Local: R. Marquês de Sapucaí 36, Apoteose</p>
+                            <a href="https://www.zig.tickets/eventos/mainstreet-festival?cupom=MNST"
+                                target="_blank"><button class="botão"> Comprar </button></a>
+                        </div>
+
+                        <div class="card card8">
+                            <img src="img\matue_1.png" alt="imagem8">
+                            <h3>Matuê no Espaço Hall</h3>
+                            <p> Local:Av. Ayrton Senna, 5850 - Gardênia Azul</p>
+                            <a href="https://uhuu.com/evento/rj/rio-de-janeiro/matue-13767" target="_blank">
+                                <button class="botão">Comprar</button></button></a>
+                        </div>
+                    </div>
+
+                    <div class="bloco3">
+
+                        <div class="card card9">
+                            <img src="img\mixed.png" alt="imagem9">
+                            <h3>MIXED by MIXED</h3>
+                            <p> Local: em Local a definir, Rio de Janeiro - RJ </p>
+                            <a href="https://www.sympla.com.br/evento/mixed-by-mixed-full-open-carnival/2687885?d&referrer=linktr.ee"
+                                target="_blank">
+                                <button class="botão">Comprar</button> </a>
+                        </div>
+
+                        <div class="card card10">
+                            <img src="img\balburdia.png" alt="imagem10">
+                            <h3>Balburdia</h3>
+                            <p> Local: Estr. dos Bandeirantes, 10636 - RJ </p>
+                            <a href="https://www.ingresse.com/balburdia/" target="_blank"> <button
+                                    class="botão">Comprar</button>
+                            </a>
+                        </div>
+
+                        <div class="card card11">
+                            <img src="img\anitta.png" alt="imagem11">
+                            <h3>Ensaio da Anitta</h3>
+                            <p> Local: Marina da Glória, Rio de Janeiro - RJ </p>
+                            <a href="https://ingresse.com/ensaios-da-anitta-2025-rio-de-janeiro/?_gl=1*1wl7wd9*_ga*NDYwOTEwNTQ2LjE3Mjk2OTI2Nzg.*_ga_PTR5BPF8MY*MTcyOTY5MjY3OC4xLjAuMTcyOTY5MjY3OC42MC4wLjE3MzU2NTIzMTY.*_ga_4RZ93FK7LP*MTcyOTY5MjY3OC4xLjAuMTcyOTY5MjY3OC4wLjAuMA..*_ga_T3ZPYCGY8W*MTcyOTY5MjY3OC4xLjAuMTcyOTY5MjY3OC4wLjAuMA"
+                                target="_blank"><button class="botão">Comprar</button></a>
+                        </div>
+
+                        <div class="card card12">
+                            <img src="img\carnarildy.png" alt="imagem12">
+                            <h3>CARNA RILDY</h3>
+                            <p>Local: Cidade das Artes - Barra da Tijuca </p>
+                            <a href="https://carnarildy.com.br/?fbclid=PAZXh0bgNhZW0CMTEAAaZ26ngM53fNB9eGCHgS_JojZDCVWC02PFo72JNNXctlPYlkAEOhBOchzyQ_aem_aEw8clqJCOk5jMaQ8dR0Pg"
+                                target="_blank"><button class="botão">Comprar</button> </a>
+                        </div>
+                    </div>
+
+                    <div class="bloco4">
+                        <div class="card card13">
+                            <img src="img\ret_2.png" alt="imagem13">
+                            <h3>RET no Espaço Hall</h3>
+                            <p> Local: Av. Ayrton Senna, 5850 - Gardênia Azul </p>
+                            <a href="https://uhuu.com/evento/rj/rio-de-janeiro/filipe-ret-13704" target="_blank"><button
+                                    class="botão">Comprar</button> </a>
+                        </div>
+
+                        <div class="card card14">
+                            <img src="img\numanice.png" alt="imagem5">
+                            <h3>Numanice</h3>
+                            <p> Local: Av. Salvador Allende, 6555 - Barra Olímpica</p>
+                            <a href="https://www.sympla.com.br/evento/numanice-rio-de-janeiro-data-extra/2536481?d=funtime&gad_source=1&gclid=Cj0KCQjw7Py4BhCbARIsAMMx-_INzZ2ZIahHgZQzgbd7ztFhwnYtXaIAj7KRyBMAFHNHplzrY08ehT8aAsUNEALw_wcB&referrer=www.google.com"
+                                target="_blank"><button class="botão">Comprar</button> </a>
+                        </div>
+
+                        <div class="card card15">
+                            <img src="img\love_sessions.png" alt="imagem5">
+                            <h3>Love sessios</h3>
+                            <p> Local: Av. Salvador Allende, 6555 - Barra Olímpica</p>
+                            <a href="https://www.sympla.com.br/evento/love-sessions-festival-2025/2772459?referrer=www.google.com" target="_blank"><button class="botão">Comprar</button>
+                            </a>
+                        </div>
+
+                        <div class="card card16">
+                            <img src="img\majestique.png" alt="imagem5">
+                            <h3> Majestique</h3>
+                            <p>Local: Av. Salvador Allende, 6555 - Barra Olímpica</p>
+                            <a href="https://www.ingresse.com/majestique-fantasy-edition/" target="_blank"><button
+                                    class="botão">Comprar</button> </a>
+                        </div>
+                    </div>
+
+
+                    <div id="Sobre" class="container-sobre">
+                        <h4> Somos uma dupla de adolescentes que curte eventos e entretenimento<br>e temos o objetivo de
+                            compartilhar nossas descobertas e ajudar você <br> a aproveitar ao máximo a vida noturna do
+                            Rio de Janeiro. Por isso,<br> decidimos criar um site que guie os usuários para os melhores
+                            eventos<br> da
+                            cidade. Nosso interesse por festas e a vontade de conectar pessoas <br> a experiências nos
+                            motivam a tornar esse projeto uma realidade.</h4>
+                    </div>
+    </main>
+
+
+    <div class="container"></div>
+    <footer class="footer">
+        <h4 id="Contato" class="footer-title">Tem dúvidas ou quer saber mais informações sobre os eventos? <br> Entre em
+            contato
+            com a gente e arranje a boa de hoje! </h4>
+
+        <div class="footer-content">
+            <a href="Projeto faculdade.html">
+                <img class="img-footer" src="img\logo_redonda_png.png" alt="Logo da Empresa">
+            </a>
+
+            <div class="form-container">
+                <form class="contact-form" action="mailto:isabelgccarvalho@gmail.com" method="post"
+                    enctype="text/plain">
+                    <input type="text" id="nome" name="nome" placeholder="Seu Nome" required>
+                    <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+                    <button type="submit">Enviar</button>
+                    <p class="footer-credits">© 2024 Todos os direitos reservados.</p>
+                </form>
+            </div>
+        </div>
+        </section>
+    </footer>
+
+</body>
+
+</html>
